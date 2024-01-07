@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/homelogo">
+
+    </item>
+    <item
+        android:id="@+id/favorites"
+        android:title="Favorites"
+        android:icon="@drawable/favoriteslogo">
+
+    </item>
+    <item
+        android:id="@+id/search"
+        android:title="Search"
+        android:icon="@drawable/searchlogo">
+
+    </item>
+    <item
+        android:id="@+id/card"
+        android:title="Card"
+        android:icon="@drawable/cardlogo">
+
+    </item>
+    <item
+        android:id="@+id/blog"
+        android:title="Blog"
+        android:icon="@drawable/commentlogo">
+
+    </item>
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/profilelogo">
+
+    </item>
+
+</menu>

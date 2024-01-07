@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "266823133146",
+    "project_id": "bookscloud-39fa2",
+    "storage_bucket": "bookscloud-39fa2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:266823133146:android:2aba454794f2fff6fa02e3",
+        "android_client_info": {
+          "package_name": "com.example.bookscloud"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAX3Qjb_iPIH9opRxD4rj3-t5YwpAHZyZI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
