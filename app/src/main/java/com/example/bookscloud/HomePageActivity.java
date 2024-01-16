@@ -13,14 +13,14 @@ import android.widget.ImageButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class HomePage extends AppCompatActivity {
+public class HomePageActivity extends AppCompatActivity {
 
     private static final String TAG = "FirebaseStorageCheck";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home_page2);
 
         ImageButton sucvecezaButton = findViewById(R.id.imageButton6);
         ImageButton ucurtmavcisiButton = findViewById(R.id.imageButton7);
@@ -96,6 +96,15 @@ public class HomePage extends AppCompatActivity {
             startActivity(intent);
         });
 
+        Button viewAll2Button = findViewById(R.id.viewAll2);
+        viewAll2Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomePageActivity.this, ViewAll.class);
+                startActivity(intent);
+            }
+        });
+
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
 
         bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -104,19 +113,19 @@ public class HomePage extends AppCompatActivity {
                 int itemId = item.getItemId();
 
                 if (itemId == R.id.home) {
-                    startActivity(new Intent(HomePage.this, HomePage.class));
+                    startActivity(new Intent(HomePageActivity.this, HomePage.class));
                     return true;
                 } else if (itemId == R.id.favorites) {
-                    startActivity(new Intent(HomePage.this, Favorites.class));
+                    startActivity(new Intent(HomePageActivity.this, Favorites.class));
                     return true;
                 } else if (itemId == R.id.cart) {
-                    startActivity(new Intent(HomePage.this, Cart.class));
+                    startActivity(new Intent(HomePageActivity.this, Cart.class));
                     return true;
                 } else if (itemId == R.id.blog) {
-                    startActivity(new Intent(HomePage.this, BookReviewActivity.class));
+                    startActivity(new Intent(HomePageActivity.this, ReviewActivity.class));
                     return true;
                 } else if (itemId == R.id.profile) {
-                    startActivity(new Intent(HomePage.this, ProfileActivity.class));
+                    startActivity(new Intent(HomePageActivity.this, ProfileActivity.class));
                     return true;
                 }
                 return false;

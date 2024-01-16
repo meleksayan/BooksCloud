@@ -3,7 +3,9 @@ package com.example.bookscloud;
 import android.graphics.Bitmap;
 import android.location.Location;
 
-public class BookReview {
+import java.io.Serializable;
+
+public class BookReview implements Serializable {
 
     private String title;
     private String author;

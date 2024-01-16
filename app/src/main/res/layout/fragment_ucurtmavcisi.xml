@@ -1,22 +1,27 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#A5D6A7">
 
     <ImageView
         android:id="@+id/book_cover"
-        android:layout_width="100dp"
-        android:layout_height="150dp"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ucurtmavcisi"/>
 
     <TextView
         android:id="@+id/book_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:text="Uçurtma Avcısı"
+        android:textStyle="bold|italic"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/book_cover"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,6 +31,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:text="Khaled Hosseini"
+        android:textStyle="bold|italic"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/book_cover"
         app:layout_constraintTop_toBottomOf="@+id/book_name" />
@@ -35,6 +43,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:text="127 ₺"
+        android:textStyle="bold|italic"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/book_cover"
         app:layout_constraintTop_toBottomOf="@+id/author_name"/>
@@ -45,7 +56,7 @@
         android:layout_height="50dp"
         android:src="@drawable/baseline_favorite_24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/book_price"/>
+        app:layout_constraintTop_toBottomOf="@id/book_price" />
 
     <ImageView
         android:id="@+id/addcart"
@@ -62,7 +73,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:inputType="textMultiLine"
+        android:text="Uçurtma Avcısı’nda, birlikte büyüyen Emir ve Hasan adlı iki çocuğun hikayesi anlatılıyor. İki çocuk, ait oldukları sınıflar bakımından birbirinden çok farklı şartlarda büyüyor. Emir’in babası, Afganistan’ın varlıklı ve tanınmış kişileri arasında yer alıyor. Hasan’ın babası ise Emir’in babasının yanında hizmetkar olarak çalışıyor. Hasan Emir’e koşulsuz şartsız bir sevgi ve bağlılık duyarken, Emir onu sürekli aşağılıyor. Bir gün Uçurtma Şenliği’nde Hasan’ın Emir’i mutlu etmek için yaptığı bir fedakarlık, çok kötü bir olayla sonuçlanıyor. Emir ise bu olaya şahit olmasına rağmen müdahale etmek için adım atmıyor. Dahası, Hasan’a karşı düşmanca tavırlarına devam ediyor. Afganistan’da Sovyet işgalinin başlamasıyla bölgede yaşayan birçok kişi gibi Emir ve babası da ABD’ye göç ediyor. Burada babasıyla birlikte eski hayatından daha yoksul bir halde yaşayan Emir, Hasan’a yaptığı eziyetler yüzünden sürekli vicdan azabı çekiyor. Ve günün birinde Hasan’a dair bir haber alıp apar topar Afganistan’a dönüyor. Emir’in burada öğrendikleri ise hikayenin akışını baştan sona değiştiriyor."
         app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="#1B5E20"
         app:layout_constraintTop_toBottomOf="@id/book_cover"
         app:layout_constraintStart_toStartOf="parent" />
 

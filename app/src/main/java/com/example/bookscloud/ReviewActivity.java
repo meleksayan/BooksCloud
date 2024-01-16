@@ -32,20 +32,19 @@ public class ReviewActivity extends AppCompatActivity {
             }
         });
     }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == ADD_REVIEW_REQUEST && resultCode == RESULT_OK) {
-            String title = data.getStringExtra("title");
-            String author = data.getStringExtra("author");
-            String review = data.getStringExtra("review");
+            BookReview bookReview = (BookReview) data.getSerializableExtra("bookReview");
 
-
-            addReviewToContainer(title, author, review);
+            if (bookReview != null) {
+                addReviewToContainer(bookReview.getTitle(), bookReview.getAuthor(), bookReview.getReview());
+            }
         }
     }
+
 
     private void addReviewToContainer(String title, String author, String review) {
         LinearLayout llReviewsContainer = findViewById(R.id.llReviewsContainer);

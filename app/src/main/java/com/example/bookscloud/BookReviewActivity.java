@@ -41,12 +41,13 @@ public class BookReviewActivity extends AppCompatActivity {
         btnOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                BookReview bookReview = new BookReview();
+                bookReview.setTitle(txtTitle.getText().toString());
+                bookReview.setAuthor(txtAuthor.getText().toString());
+                bookReview.setReview(txtReview.getText().toString());
+
                 Intent intent = new Intent();
-                Bundle bundle = new Bundle();
-                bundle.putString("title", txtTitle.getText().toString());
-                bundle.putString("author", txtAuthor.getText().toString());
-                bundle.putString("review", txtReview.getText().toString());
-                intent.putExtras(bundle);
+                intent.putExtra("bookReview", bookReview);
                 setResult(Activity.RESULT_OK, intent);
                 finish();
             }
@@ -61,6 +62,4 @@ public class BookReviewActivity extends AppCompatActivity {
             }
         });
     }
-
-
 }

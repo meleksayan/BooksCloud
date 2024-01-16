@@ -1,22 +1,27 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#A5D6A7">
 
     <ImageView
         android:id="@+id/book_cover"
-        android:layout_width="100dp"
-        android:layout_height="150dp"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/satranc"/>
 
     <TextView
         android:id="@+id/book_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:text="Satranç"
+        android:textStyle="bold|italic"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/book_cover"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,6 +31,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:text="Stefan Zweig"
+        android:textStyle="bold|italic"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/book_cover"
         app:layout_constraintTop_toBottomOf="@+id/book_name" />
@@ -35,6 +43,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:text="13 ₺"
+        android:textStyle="bold|italic"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/book_cover"
         app:layout_constraintTop_toBottomOf="@+id/author_name"/>
@@ -45,7 +56,7 @@
         android:layout_height="50dp"
         android:src="@drawable/baseline_favorite_24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/book_price"/>
+        app:layout_constraintTop_toBottomOf="@id/book_price" />
 
     <ImageView
         android:id="@+id/addcart"
@@ -55,7 +66,6 @@
         app:layout_constraintEnd_toStartOf="@id/addfavorite"
         app:layout_constraintTop_toBottomOf="@id/book_price"/>
 
-
     <EditText
         android:id="@+id/description"
         android:layout_width="0dp"
@@ -64,6 +74,13 @@
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/book_cover"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:text = "Satranç, Zweig’ın novella türünde eriştiği
+    ustalığı gözler önüne seren en son yapıtı; aynı zamanda
+    bir edebi veda mektubudur. İkinci Dünya Savaşı yüzünden
+    ülkesini terk eden yazarın, çok sevdiği Avrupa’nın içler
+    acısı durumunun ve zorunlu göçün yarattığı derin umutsuzluk sonucu yaşamına son vermesinden bir yıl önce, 1941’de yayımlanmıştır. Buenos Aires’e gitmek üzere New York’tan hareket eden büyük bir geminin yolcuları arasında dünya satranç şampiyonu Mirko Czentovic de vardır. Satranç meraklısı bir grup yolcu kendisiyle oynadıkları ilk partiyi kaybeder. Czentovic ikinci partiyi de kazanmak üzereyken, aniden zuhur eden Dr. B. adlı şahsın müdahale ve yönlendirmesiyle oyun berabere biter. Bunun üzerine Dr. B., Czentovic’le tek başına oynamaya ikna edilir. Ancak bir eğlence olarak başlayan satranç oyunu, Nazilerin yarattığı korku ve dehşet ikliminden payına düşeni
+    alan bu adamda bazı travmatik anıları canlandıracaktır" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

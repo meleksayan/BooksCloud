@@ -1,22 +1,27 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#A5D6A7">
 
     <ImageView
         android:id="@+id/book_cover"
-        android:layout_width="100dp"
-        android:layout_height="150dp"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/bilinmeyenbirkm"/>
 
     <TextView
         android:id="@+id/book_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:text="Bilinmeyen Bir Kadının Mektubu"
+        android:textStyle="bold|italic"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/book_cover"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,6 +31,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:text="Stefan Zweig"
+        android:textStyle="bold|italic"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/book_cover"
         app:layout_constraintTop_toBottomOf="@+id/book_name" />
@@ -35,6 +43,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:text="30 ₺"
+        android:textStyle="bold|italic"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/book_cover"
         app:layout_constraintTop_toBottomOf="@+id/author_name"/>
@@ -45,7 +56,7 @@
         android:layout_height="50dp"
         android:src="@drawable/baseline_favorite_24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/book_price"/>
+        app:layout_constraintTop_toBottomOf="@id/book_price" />
 
     <ImageView
         android:id="@+id/addcart"
@@ -62,7 +73,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:inputType="textMultiLine"
+        android:text="Bilinmeyen Bir Kadının Mektubu'nun kadın kahramanını sadece uzun bir mektubun yazarı olarak tanıyoruz. Kadının hayatı boyunca sevmiş olduğu erkek için kaleme aldığı bu mektubun göndereninin adı yoktur. Mektubun başında tek bir hitap vardır:'Sana, beni asla tanımamış olan sana'. Kadın büyük tutkusunu hep bir bilinmeyen olarak, yani tek başına yaşamaya razıdır, bu aşk öyküsünde taraflar değil, sadece tek bir taraf vardır. Böylesine, gerçek anlamda aşk denilebilir mi? Zweig okurunu, bir kez daha, insan psikolojisinde eşine pek rastlanmayan bir yolculuğa davet ediyor. Bu yeni yolculuğun sonunda mutlak aşk kavramının şimdiye kadar bilinmeyen kıyılarına varmayı amaçlamış olması da bir ihtimal!"
         app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="#1B5E20"
         app:layout_constraintTop_toBottomOf="@id/book_cover"
         app:layout_constraintStart_toStartOf="parent" />
 

@@ -35,7 +35,7 @@ public class BookListActivity extends AppCompatActivity {
                             for (DocumentSnapshot document : task.getResult()) {
                                 String bookName = document.getString("book_name");
                                 String authorName = document.getString("author_name");
-                                double price = document.getDouble("price");
+                                String price = document.getString("price");
                                 String bookCoverUrl = document.getString("book_cover_url");
 
                                 LinearLayout bookLayout = new LinearLayout(BookListActivity.this);
@@ -50,7 +50,7 @@ public class BookListActivity extends AppCompatActivity {
                                 authorNameTextView.setText(authorName);
 
                                 TextView priceTextView = new TextView(BookListActivity.this);
-                                priceTextView.setText(String.format("$%.2f", price));
+                                priceTextView.setText(price);
 
                                 bookLayout.addView(bookNameTextView);
                                 bookLayout.addView(authorNameTextView);

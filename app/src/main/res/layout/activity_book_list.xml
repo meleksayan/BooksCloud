@@ -11,7 +11,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="16dp"
-        android:id="@+id/bookListLayout">
+        android:id="@+id/bookListLayout"
+        tools:ignore="MissingConstraints">
 
         <ImageView
             android:id="@+id/book_cover"
@@ -49,6 +50,20 @@
             android:textSize="16sp"
             android:textStyle="bold"
             android:text="Price" />
+
+        <ImageView
+            android:id="@+id/addfavorite"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/baseline_favorite_24"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="8dp"
+            android:clickable="true"
+            android:focusable="true"
+
+            />
     </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
