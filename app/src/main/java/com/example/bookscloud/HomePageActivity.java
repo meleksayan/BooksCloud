@@ -6,12 +6,22 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 
 public class HomePageActivity extends AppCompatActivity {
 
@@ -20,7 +30,7 @@ public class HomePageActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_page2);
+        setContentView(R.layout.activity_home_page);
 
         ImageButton sucvecezaButton = findViewById(R.id.imageButton6);
         ImageButton ucurtmavcisiButton = findViewById(R.id.imageButton7);
@@ -43,7 +53,7 @@ public class HomePageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.flFragment, new SucvecezaFragment())
+                        .replace(R.id.flFragment, new SimyaciFragment())
                         .addToBackStack(null)
                         .commit();
             }
@@ -53,7 +63,7 @@ public class HomePageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.flFragment, new SucvecezaFragment())
+                        .replace(R.id.flFragment, new SekerPortakaliFragment())
                         .addToBackStack(null)
                         .commit();
             }
@@ -63,7 +73,7 @@ public class HomePageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.flFragment, new SucvecezaFragment())
+                        .replace(R.id.flFragment, new SatrancFragment())
                         .addToBackStack(null)
                         .commit();
             }
@@ -105,6 +115,7 @@ public class HomePageActivity extends AppCompatActivity {
             }
         });
 
+
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
 
         bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -113,13 +124,13 @@ public class HomePageActivity extends AppCompatActivity {
                 int itemId = item.getItemId();
 
                 if (itemId == R.id.home) {
-                    startActivity(new Intent(HomePageActivity.this, HomePage.class));
+                    startActivity(new Intent(HomePageActivity.this, HomePageActivity.class));
                     return true;
                 } else if (itemId == R.id.favorites) {
-                    startActivity(new Intent(HomePageActivity.this, Favorites.class));
+                    startActivity(new Intent(HomePageActivity.this, FavoritesActivity.class));
                     return true;
                 } else if (itemId == R.id.cart) {
-                    startActivity(new Intent(HomePageActivity.this, Cart.class));
+                    startActivity(new Intent(HomePageActivity.this, CartActivity.class));
                     return true;
                 } else if (itemId == R.id.blog) {
                     startActivity(new Intent(HomePageActivity.this, ReviewActivity.class));
@@ -132,8 +143,22 @@ public class HomePageActivity extends AppCompatActivity {
             }
         });
 
+        EditText searchEditText = findViewById(R.id.searchbox);
+        searchEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    String searchedBook = searchEditText.getText().toString();
 
+                    Intent searchIntent = new Intent(HomePageActivity.this, SearchActivity.class);
+                    searchIntent.putExtra("SEARCHED_BOOK", searchedBook);
+                    startActivity(searchIntent);
 
+                    return true;
+                }
+                return false;
+            }
+   });
 
     }
 }

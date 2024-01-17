@@ -16,9 +16,7 @@ public class ViewAll extends AppCompatActivity {
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     CollectionReference booksRef = db.collection("books");
-
-
-    private BookAdapter adapter;
+    public BookAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +26,7 @@ public class ViewAll extends AppCompatActivity {
         setUpRecyclerView();
     }
 
-    private void setUpRecyclerView() {
+    public void setUpRecyclerView() {
         Query query = booksRef.orderBy("book_name",Query.Direction.DESCENDING);
 
         FirestoreRecyclerOptions<Book> options = new FirestoreRecyclerOptions.Builder<Book>().setQuery(query, Book.class).build();

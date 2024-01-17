@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomePage">
+    tools:context=".HomePageActivity">
 
 
     <TextView
@@ -37,16 +37,16 @@
 
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/searchbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="572dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:drawableStart="@drawable/baseline_youtube_searched_for_24"
         android:ems="15"
         android:hint="SEARCH"
         android:inputType="text"
-        android:drawableStart="@drawable/baseline_youtube_searched_for_24"
         android:textColorLink="@color/black"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,8 +57,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src= "@drawable/baseline_notifications_active_24"
-        app:layout_constraintTop_toTopOf="@id/editTextText"
-        app:layout_constraintBottom_toBottomOf="@id/editTextText"
+        app:layout_constraintTop_toTopOf="@id/searchbox"
+        app:layout_constraintBottom_toBottomOf="@id/searchbox"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="30px"
         />
@@ -72,7 +72,7 @@
         app:layout_constraintBottom_toTopOf="@id/bestRow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextText">
+        app:layout_constraintTop_toBottomOf="@id/searchbox">
 
         <Button
             android:id="@+id/button4"
@@ -144,7 +144,7 @@
         app:layout_constraintBottom_toTopOf="@id/new_releases"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextText">
+        app:layout_constraintTop_toBottomOf="@id/searchbox">
 
         <Button
             android:id="@+id/button6"
@@ -223,6 +223,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         app:menu="@menu/bottom_menu"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#214B33"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

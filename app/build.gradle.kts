@@ -47,6 +47,12 @@ dependencies {
     implementation ("com.squareup.picasso:picasso:2.71828")
     implementation ("com.firebaseui:firebase-ui-firestore:8.0.0")
     implementation("com.google.firebase:firebase-storage:20.3.0")
+    testImplementation ("junit:junit:4.13.2")
+    androidTestImplementation ("androidx.test:runner:1.4.0")
+    androidTestImplementation ("androidx.test:rules:1.4.0")
+    androidTestImplementation ("androidx.test.ext:junit:1.1.3")
+    testImplementation ("io.mockk:mockk:1.12.0")
+    androidTestImplementation ("androidx.test.espresso:espresso-core:3.4.0")
 
 
 

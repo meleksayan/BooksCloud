@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF0E6"
+    tools:context=".ConfirmFragment">
+
+
+    <TextView
+        android:id="@+id/profile_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#214B33"
+        android:text="   BOOKSCLOUD\n"
+        android:textColor="#F6D198"
+        android:textStyle="bold|italic"
+        android:textSize="33sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/game_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_text"
+        android:background="#F6D198"
+        android:text=" Payment"
+        android:gravity="start"
+        android:textSize="25sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/addresstitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:paddingLeft="5dp"
+        android:background="#F6D198"
+        android:textStyle="bold|italic"
+        android:text="Delivery Adress"
+        app:layout_constraintTop_toBottomOf="@+id/game_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20dp"/>
+
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:background="#93bf85"
+        android:gravity="start|center"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:text="Kötekli, Sıtkı Kocman Street, 48000 Menteşe/Muğla"
+        android:textStyle="bold|normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addresstitle" />
+
+    <TextView
+        android:id="@+id/cardinf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Card Information"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@id/address"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="5dp"
+        android:background="#F6D198"
+        android:textStyle="bold|italic"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/cardnumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Please enter your card number"
+        app:layout_constraintTop_toBottomOf="@id/cardinf"
+        android:textStyle="bold|italic"
+        android:layout_marginTop="25dp"
+        android:background="#93bf85"
+        android:padding="10dp"/>
+
+    <TextView
+        android:id="@+id/expdatetitle"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="Expiration Date"
+        android:padding="10dp"
+        android:background="#F6D198"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardnumber"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/expdate"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:inputType="date"
+        app:layout_constraintStart_toEndOf="@id/expdatetitle"
+        app:layout_constraintTop_toTopOf="@id/expdatetitle"
+        app:layout_constraintBottom_toBottomOf="@id/expdatetitle"
+        android:background="#93bf85"
+        android:layout_marginLeft="25dp" />
+
+
+    <TextView
+        android:id="@+id/cvvtitle"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="CVV"
+        android:padding="10dp"
+        android:background="#F6D198"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/expdatetitle"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/cvvnumber"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="CVV"
+        android:background="#93bf85"
+        android:padding="10dp"
+        app:layout_constraintStart_toEndOf="@id/cvvtitle"
+        app:layout_constraintTop_toTopOf="@id/cvvtitle"
+        app:layout_constraintBottom_toBottomOf="@id/cvvtitle"
+        android:layout_marginLeft="25dp"/>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:padding="10dp"
+        android:text="I have read and approve the user aggrement"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvvnumber" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm"
+        android:backgroundTint="#214B33"
+        app:layout_constraintTop_toBottomOf="@id/checkBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:gravity="center"/>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#214B33">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
